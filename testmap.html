@@ -13,14 +13,13 @@
       }
     </style>
     <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true"></script>
+
+    <script src="sean.js"></script>
+
     <script>
-// This example adds an animated symbol to a polyline.
-
-
 //MAP INITIALIZATION
 //-----------------------------------------------------------------------------------
 
-var sean;
 
 //HURRICANES FROM 2014
 var arthur;
@@ -42,47 +41,7 @@ function initialize() {
 
   	var map = new google.maps.Map(document.getElementById('map-canvas'),
       	mapOptions);
-
-
-
-  	//TROPICAL STORM SEAN 2011
-  	var seanCoordinates = [
-	    new google.maps.LatLng(27.20, -69.40),
-	    new google.maps.LatLng(27.70, -69.40),
-	    new google.maps.LatLng(27.80, -69.80),
-	    new google.maps.LatLng(27.90, -70.10),
-	    new google.maps.LatLng(27.90, -70.40),
-	    new google.maps.LatLng(27.90, -70.50),
-	    new google.maps.LatLng(28.70, -70.50),
-	    new google.maps.LatLng(29.50, -70.70),
-	    new google.maps.LatLng(30.20, -70.90),
-	    new google.maps.LatLng(30.40, -70.50),
-	    new google.maps.LatLng(30.90, -69.40), 
-	    new google.maps.LatLng(31.50, -68.20),
-	    new google.maps.LatLng(32.90, -66.30),
-	    new google.maps.LatLng(34.00, -64.10),
-	    new google.maps.LatLng(35.50, -61.30)
-  	];
-
-  	// Define the symbol, using one of the predefined paths ('CIRCLE')
-  	// supplied by the Google Maps JavaScript API.
-  	var seanSymbol = {
-    	path: google.maps.SymbolPath.CIRCLE,
-    	scale: 8,
-    	strokeColor: '#333599'
-  	};
-
-  	// Create the polysean and add the symbol to it via the 'icons' property.
-  	sean = new google.maps.Polyline({
-    	path: seanCoordinates,
-    	icons: [{
-      	icon: seanSymbol,
-      	offset: '100%'
-    	}],
-    	map: map
-  	});
-
-  	animateSeanCircle();
+  	
 
   	//TROPICAL STORM ARTHUR
   	var arthurCoordinates = [
@@ -109,12 +68,14 @@ function initialize() {
   	var arthurSymbol = {
     	path: google.maps.SymbolPath.CIRCLE,
     	scale: 8,
-    	strokeColor: '#333599'
+    	strokeColor: '#d6d6d6'
   	};
 
 	// Create the polysean and add the symbol to it via the 'icons' property.
 	arthur = new google.maps.Polyline({
 		path: arthurCoordinates,
+		strokeColor: '#bce8ee',
+		strokeOpacity: 0.4,
     	icons: [{
       		icon: arthurSymbol,
       		offset: '100%'
@@ -126,6 +87,7 @@ function initialize() {
 
 //-----------------------------------------------------------------------------------
 //TROPICAL STORM TWO
+
 	var twoCoordinates = [
 		new google.maps.LatLng(11.60,  -43.80),
 		new google.maps.LatLng(12.00,  -45.10),
@@ -140,12 +102,14 @@ function initialize() {
   	var twoSymbol = {
     	path: google.maps.SymbolPath.CIRCLE,
     	scale: 8,
-    	strokeColor: '#333599'
+    	strokeColor: '#d6d6d6'
   	};
 
 	// Create the polysean and add the symbol to it via the 'icons' property.
 	two = new google.maps.Polyline({
 		path: twoCoordinates,
+		strokeColor: '#bce8ee',
+		strokeOpacity: 0.4,
     	icons: [{
       		icon: twoSymbol,
       		offset: '100%'
@@ -188,13 +152,14 @@ function initialize() {
   	var berthaSymbol = {
     	path: google.maps.SymbolPath.CIRCLE,
     	scale: 8,
-    	strokeColor: '#333599'
+    	strokeColor: '#d6d6d6'
   	};
 
 	// Create the polysean and add the symbol to it via the 'icons' property.
 	bertha = new google.maps.Polyline({
 		path: berthaCoordinates,
 		strokeColor: '#bce8ee',
+		strokeOpacity: 0.4,
     	icons: [{
       		icon: berthaSymbol,
       		offset: '100%'
@@ -238,12 +203,14 @@ function initialize() {
   	var cristobalSymbol = {
     	path: google.maps.SymbolPath.CIRCLE,
     	scale: 8,
-    	strokeColor: '#333599'
+    	strokeColor: '#d6d6d6'
   	};
 
 	// Create the polysean and add the symbol to it via the 'icons' property.
 	cristobal = new google.maps.Polyline({
 		path: cristobalCoordinates,
+		strokeColor: '#bce8ee',
+		strokeOpacity: 0.4,
     	icons: [{
       		icon: cristobalSymbol,
       		offset: '100%'
@@ -271,12 +238,14 @@ function initialize() {
   	var dollySymbol = {
     	path: google.maps.SymbolPath.CIRCLE,
     	scale: 8,
-    	strokeColor: '#333599'
+    	strokeColor: '#d6d6d6'
   	};
 
 	// Create the polysean and add the symbol to it via the 'icons' property.
 	dolly = new google.maps.Polyline({
 		path: dollyCoordinates,
+		strokeColor: '#bce8ee',
+		strokeOpacity: 0.4,
     	icons: [{
       		icon: dollySymbol,
       		offset: '100%'
@@ -329,12 +298,14 @@ function initialize() {
   	var edouardSymbol = {
     	path: google.maps.SymbolPath.CIRCLE,
     	scale: 8,
-    	strokeColor: '#333599'
+    	strokeColor: '#d6d6d6'
   	};
 
 	// Create the polysean and add the symbol to it via the 'icons' property.
 	edouard = new google.maps.Polyline({
 		path: edouardCoordinates,
+		strokeColor: '#bce8ee',
+		strokeOpacity: 0.4,
     	icons: [{
       		icon: edouardSymbol,
       		offset: '100%'
@@ -345,7 +316,7 @@ function initialize() {
 	animateEdouardCircle();
 
 //-----------------------------------------------------------------------------------
-//TROPICAL STORM EDOUARD
+//TROPICAL STORM FAY
 
 	var fayCoordinates = [
 		new google.maps.LatLng(23.80,  -63.70),
@@ -369,12 +340,14 @@ function initialize() {
   	var faySymbol = {
     	path: google.maps.SymbolPath.CIRCLE,
     	scale: 8,
-    	strokeColor: '#333599'
+    	strokeColor: '#d6d6d6'
   	};
 
 	// Create the polysean and add the symbol to it via the 'icons' property.
 	fay = new google.maps.Polyline({
 		path: fayCoordinates,
+		strokeColor: '#bce8ee',
+		strokeOpacity: 0.4,
     	icons: [{
       		icon: faySymbol,
       		offset: '100%'
@@ -388,7 +361,35 @@ function initialize() {
 //TROPICAL STORM EDOUARD
 
 	var gonzaloCoordinates = [
-		new google.maps.LatLng()
+		new google.maps.LatLng(16.40,  -58.40), 
+		new google.maps.LatLng(16.40,  -59.50), 
+		new google.maps.LatLng(16.60,  -60.20), 
+		new google.maps.LatLng(16.80,  -60.90), 
+		new google.maps.LatLng(17.20,  -61.90), 
+		new google.maps.LatLng(17.90,  -62.90),
+		new google.maps.LatLng(18.70,  -63.40), 
+		new google.maps.LatLng(19.60,  -64.40),
+		new google.maps.LatLng(20.30,  -65.20), 
+		new google.maps.LatLng(21.20,  -66.00), 
+		new google.maps.LatLng(22.20,  -66.60), 
+		new google.maps.LatLng(22.90,  -67.30), 
+		new google.maps.LatLng(23.50,  -68.00), 
+		new google.maps.LatLng(24.10,  -68.60),
+		new google.maps.LatLng(24.60,  -68.70),
+		new google.maps.LatLng(25.30,  -68.70),
+		new google.maps.LatLng(26.10,  -68.60), 
+		new google.maps.LatLng(27.10,  -68.20), 
+		new google.maps.LatLng(28.00,  -67.50),
+		new google.maps.LatLng(29.30,  -66.80), 
+		new google.maps.LatLng(30.40,  -66.10), 
+		new google.maps.LatLng(31.70,  -65.30), 
+		new google.maps.LatLng(32.70,  -64.50), 
+		new google.maps.LatLng(34.70,  -63.20),
+		new google.maps.LatLng(36.80,  -61.70), 
+		new google.maps.LatLng(39.30,  -60.00), 
+		new google.maps.LatLng(42.30,  -57.00), 
+ 		new google.maps.LatLng(46.30,  -52.90), 
+ 		new google.maps.LatLng(49.00,  -47.30)
 	];
 
 	// Define the symbol, using one of the predefined paths ('CIRCLE')
@@ -396,12 +397,14 @@ function initialize() {
   	var gonzaloSymbol = {
     	path: google.maps.SymbolPath.CIRCLE,
     	scale: 8,
-    	strokeColor: '#333599'
+    	strokeColor: '#d6d6d6'
   	};
 
 	// Create the polysean and add the symbol to it via the 'icons' property.
 	gonzalo = new google.maps.Polyline({
 		path: gonzaloCoordinates,
+		strokeColor: '#bce8ee',
+		strokeOpacity: 0.4,
     	icons: [{
       		icon: gonzaloSymbol,
       		offset: '100%'
@@ -410,7 +413,6 @@ function initialize() {
   	});
 
 	animateGonzaloCircle();	
-
 
 }
 //-----------------------------------------------------------------------------------
@@ -422,18 +424,6 @@ function initialize() {
 
 // Use the DOM setInterval() function to change the offset of the symbol
 // at fixed intervals.
-function animateSeanCircle() {
-    var count = 0;
-    window.setInterval(function() {
-      count = (count + 1) % 200;
-
-      var icons = sean.get('icons');
-      icons[0].offset = (count / 2) + '%';
-      sean.set('icons', icons);
-  }, 20);
-}
-
-
 
 function animateArthurCircle() {
     var count = 0;
@@ -465,7 +455,7 @@ function animateBerthaCircle() {
       var icons = bertha.get('icons');
       icons[0].offset = (count / 2) + '%';
       bertha.set('icons', icons);
-  }, 20);
+  }, 20); 
 }
 
 function animateCristobalCircle() {
