@@ -565,6 +565,126 @@ function initialize() {
 	
 	animateJulioCircle();	
 
+//-----------------------------------------------------------------------------------
+//TROPICAL STORM KARINA
+	karina = new google.maps.Polyline({
+		path: karinaCoordinates,
+		strokeColor: '#bce8ee',
+		strokeOpacity: 0.4,
+		icons: [{
+	  		icon: karinaSymbol,
+	  		offset: '100%'
+		}],
+		map: map
+	});
+	
+	animateKarinaCircle();	
+
+//-----------------------------------------------------------------------------------
+//TROPICAL STORM KARINA
+	lowell = new google.maps.Polyline({
+		path: lowellCoordinates,
+		strokeColor: '#bce8ee',
+		strokeOpacity: 0.4,
+		icons: [{
+	  		icon: lowellSymbol,
+	  		offset: '100%'
+		}],
+		map: map
+	});
+	
+	animateLowellCircle();
+
+//-----------------------------------------------------------------------------------
+//TROPICAL STORM MARIE
+	marie = new google.maps.Polyline({
+		path: marieCoordinates,
+		strokeColor: '#bce8ee',
+		strokeOpacity: 0.4,
+		icons: [{
+	  		icon: marieSymbol,
+	  		offset: '100%'
+		}],
+		map: map
+	});
+	
+	animateMarieCircle();
+
+//-----------------------------------------------------------------------------------
+//TROPICAL STORM NORBERT
+	norbert = new google.maps.Polyline({
+		path: norbertCoordinates,
+		strokeColor: '#bce8ee',
+		strokeOpacity: 0.4,
+		icons: [{
+	  		icon: norbertSymbol,
+	  		offset: '100%'
+		}],
+		map: map
+	});
+	
+	animateNorbertCircle();
+
+//-----------------------------------------------------------------------------------
+//TROPICAL STORM ODILE
+	odile = new google.maps.Polyline({
+		path: odileCoordinates,
+		strokeColor: '#bce8ee',
+		strokeOpacity: 0.4,
+		icons: [{
+	  		icon: odileSymbol,
+	  		offset: '100%'
+		}],
+		map: map
+	});
+	
+	animateOdileCircle();
+
+//-----------------------------------------------------------------------------------
+//TROPICAL STORM POLO
+	polo = new google.maps.Polyline({
+		path: poloCoordinates,
+		strokeColor: '#bce8ee',
+		strokeOpacity: 0.4,
+		icons: [{
+	  		icon: poloSymbol,
+	  		offset: '100%'
+		}],
+		map: map
+	});
+	
+	animatePoloCircle();
+
+//-----------------------------------------------------------------------------------
+//TROPICAL STORM RACHEL
+	rachel = new google.maps.Polyline({
+		path: rachelCoordinates,
+		strokeColor: '#bce8ee',
+		strokeOpacity: 0.4,
+		icons: [{
+	  		icon: rachelSymbol,
+	  		offset: '100%'
+		}],
+		map: map
+	});
+	
+	animateRachelCircle();
+
+//-----------------------------------------------------------------------------------
+//TROPICAL STORM SIMON
+	simon = new google.maps.Polyline({
+		path: simonCoordinates,
+		strokeColor: '#bce8ee',
+		strokeOpacity: 0.4,
+		icons: [{
+	  		icon: simonSymbol,
+	  		offset: '100%'
+		}],
+		map: map
+	});
+	
+	animateSimonCircle();
+
 
 //-----------------------------------------------------------------------------------
 //SOUTH PACIFIC
@@ -677,11 +797,12 @@ function initialize() {
 	
 	animateItaCircle();
 
-	
+	/*
 	var oceanCurrentsLayer = new google.maps.KmlLayer({
     	url: 'https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&uact=8&ved=0CB4QFjAA&url=http%3A%2F%2Fsos.noaa.gov%2Fkml%2Fkml%2Focean_currents.kml&ei=xIP2VNLVC6PHsQTwpYHIBA&usg=AFQjCNFbPpknEHeiowkQuGbr9jh1XoUZzQ&sig2=CwKylxmR0lTK-OraDUpAXg'
   	});
   	oceanCurrentsLayer.setMap(map);
+	*/
 
   	//ocean temp
   	/*
