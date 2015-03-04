@@ -416,6 +416,157 @@ function initialize() {
 	animateAmandaCircle();	
 
 //-----------------------------------------------------------------------------------
+//TROPICAL STORM BORIS
+	boris = new google.maps.Polyline({
+		path: borisCoordinates,
+		strokeColor: '#bce8ee',
+		strokeOpacity: 0.4,
+		icons: [{
+	  		icon: borisSymbol,
+	  		offset: '100%'
+		}],
+		map: map
+	});
+	
+	animateBorisCircle();	
+
+//-----------------------------------------------------------------------------------
+//TROPICAL STORM CRISTINA
+	cristina = new google.maps.Polyline({
+		path: cristinaCoordinates,
+		strokeColor: '#bce8ee',
+		strokeOpacity: 0.4,
+		icons: [{
+	  		icon: cristinaSymbol,
+	  		offset: '100%'
+		}],
+		map: map
+	});
+	
+	animateCristinaCircle();	
+
+//-----------------------------------------------------------------------------------
+//TROPICAL STORM DOUGLAS
+	douglas = new google.maps.Polyline({
+		path: douglasCoordinates,
+		strokeColor: '#bce8ee',
+		strokeOpacity: 0.4,
+		icons: [{
+	  		icon: douglasSymbol,
+	  		offset: '100%'
+		}],
+		map: map
+	});
+	
+	animateDouglasCircle();	
+
+//-----------------------------------------------------------------------------------
+//TROPICAL STORM ELIDA
+	elida = new google.maps.Polyline({
+		path: elidaCoordinates,
+		strokeColor: '#bce8ee',
+		strokeOpacity: 0.4,
+		icons: [{
+	  		icon: elidaSymbol,
+	  		offset: '100%'
+		}],
+		map: map
+	});
+	
+	animateElidaCircle();	
+
+//-----------------------------------------------------------------------------------
+//TROPICAL STORM FAUSTO
+	fausto = new google.maps.Polyline({
+		path: faustoCoordinates,
+		strokeColor: '#bce8ee',
+		strokeOpacity: 0.4,
+		icons: [{
+	  		icon: faustoSymbol,
+	  		offset: '100%'
+		}],
+		map: map
+	});
+	
+	animateFaustoCircle();	
+
+//-----------------------------------------------------------------------------------
+//TROPICAL STORM WALI
+	wali = new google.maps.Polyline({
+		path: waliCoordinates,
+		strokeColor: '#bce8ee',
+		strokeOpacity: 0.4,
+		icons: [{
+	  		icon: waliSymbol,
+	  		offset: '100%'
+		}],
+		map: map
+	});
+	
+	animateWaliCircle();	
+
+//-----------------------------------------------------------------------------------
+//TROPICAL STORM GENEVIEVE
+	genevieve = new google.maps.Polyline({
+		path: genevieveCoordinates,
+		strokeColor: '#bce8ee',
+		strokeOpacity: 0.4,
+		icons: [{
+	  		icon: genevieveSymbol,
+	  		offset: '100%'
+		}],
+		map: map
+	});
+	
+	animateGenevieveCircle();	
+
+//-----------------------------------------------------------------------------------
+//TROPICAL STORM HERNAN
+	hernan = new google.maps.Polyline({
+		path: hernanCoordinates,
+		strokeColor: '#bce8ee',
+		strokeOpacity: 0.4,
+		icons: [{
+	  		icon: hernanSymbol,
+	  		offset: '100%'
+		}],
+		map: map
+	});
+	
+	animateHernanCircle();	
+
+//-----------------------------------------------------------------------------------
+//TROPICAL STORM ISELLE
+	iselle = new google.maps.Polyline({
+		path: iselleCoordinates,
+		strokeColor: '#bce8ee',
+		strokeOpacity: 0.4,
+		icons: [{
+	  		icon: iselleSymbol,
+	  		offset: '100%'
+		}],
+		map: map
+	});
+	
+	animateIselleCircle();	
+
+//-----------------------------------------------------------------------------------
+//TROPICAL STORM JULIO
+	julio = new google.maps.Polyline({
+		path: julioCoordinates,
+		strokeColor: '#bce8ee',
+		strokeOpacity: 0.4,
+		icons: [{
+	  		icon: julioSymbol,
+	  		offset: '100%'
+		}],
+		map: map
+	});
+	
+	animateJulioCircle();	
+
+
+//-----------------------------------------------------------------------------------
 //SOUTH PACIFIC
 //-----------------------------------------------------------------------------------
 
@@ -526,6 +677,20 @@ function initialize() {
 	
 	animateItaCircle();
 
+	
+	var oceanCurrentsLayer = new google.maps.KmlLayer({
+    	url: 'https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&uact=8&ved=0CB4QFjAA&url=http%3A%2F%2Fsos.noaa.gov%2Fkml%2Fkml%2Focean_currents.kml&ei=xIP2VNLVC6PHsQTwpYHIBA&usg=AFQjCNFbPpknEHeiowkQuGbr9jh1XoUZzQ&sig2=CwKylxmR0lTK-OraDUpAXg'
+  	});
+  	oceanCurrentsLayer.setMap(map);
+
+  	//ocean temp
+  	/*
+  	var oceanTempLayer = new google.maps.KmlLayer({
+    	url: 'http://kml.wxtiles.com/wxtiles.sst.kml'
+  	});
+  	oceanTempLayer.setMap(map);*/
+
+	
 }
 
 

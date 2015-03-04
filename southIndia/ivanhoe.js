@@ -2,10 +2,10 @@ var ivanhoe;
 
 //TROPICAL STORM ivanhoe
   	var ivanhoeCoordinates = [
-	  	  new google.maps.LatLng(-16.60,   79.40)
-        new google.maps.LatLng(-17.60,   81.10)
-        new google.maps.LatLng(-20.40,   82.80)
-        new google.maps.LatLng(-25.50,   86.30)
+	  	  new google.maps.LatLng(-16.60,   79.40),
+        new google.maps.LatLng(-17.60,   81.10),
+        new google.maps.LatLng(-20.40,   82.80),
+        new google.maps.LatLng(-25.50,   86.30),
   	];
 
   // Define the symbol, using one of the predefined paths ('CIRCLE')
