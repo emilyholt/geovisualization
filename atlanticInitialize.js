@@ -603,7 +603,7 @@ function initialize() {
 
 //-----------------------------------------------------------------------------------
 //TROPICAL STORM RAFAEL
-  refael = new google.maps.Polyline({
+  rafael = new google.maps.Polyline({
     path: rafaelCoordinates,
     strokeColor: '#bce8ee',
     strokeOpacity: 0.4,
