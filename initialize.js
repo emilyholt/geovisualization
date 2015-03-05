@@ -685,6 +685,51 @@ function initialize() {
 	
 	animateSimonCircle();
 
+//-----------------------------------------------------------------------------------
+//TROPICAL STORM ANA
+	ana = new google.maps.Polyline({
+		path: anaCoordinates,
+		strokeColor: '#bce8ee',
+		strokeOpacity: 0.4,
+		icons: [{
+	  		icon: anaSymbol,
+	  		offset: '100%'
+		}],
+		map: map
+	});
+	
+	animateAnaCircle();
+
+//-----------------------------------------------------------------------------------
+//TROPICAL STORM TRUDY
+	trudy = new google.maps.Polyline({
+		path: trudyCoordinates,
+		strokeColor: '#bce8ee',
+		strokeOpacity: 0.4,
+		icons: [{
+	  		icon: trudySymbol,
+	  		offset: '100%'
+		}],
+		map: map
+	});
+	
+	animateTrudyCircle();
+
+//-----------------------------------------------------------------------------------
+//TROPICAL STORM VANCE
+	vance = new google.maps.Polyline({
+		path: vanceCoordinates,
+		strokeColor: '#bce8ee',
+		strokeOpacity: 0.4,
+		icons: [{
+	  		icon: vanceSymbol,
+	  		offset: '100%'
+		}],
+		map: map
+	});
+	
+	animateVanceCircle();
+
 
 //-----------------------------------------------------------------------------------
 //SOUTH PACIFIC
