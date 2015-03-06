@@ -12,9 +12,39 @@
    
     <style>
       html, body, #map-canvas {
-        height: 100%;
+        height: 95%;
         margin: 0px;
         padding: 0px
+      }
+    </style>
+
+    <style type="text/css">
+      #legend {
+        background: #FFF;
+        padding: 10px;
+        margin: 5px;
+        font-size: 12px;
+        font-family: Arial, sans-serif;
+      }
+
+      .color {
+        border: 1px solid;
+        height: 12px;
+        width: 12px;
+        margin-right: 3px;
+        float: left;
+      }
+
+      .white {
+        background: #d6d6d6;
+      }
+
+      .turquiose {
+        background: #fd00ff;
+      }
+
+      .purple {
+        background: #00fff9;
       }
     </style>
 
@@ -87,5 +117,19 @@
         </div>
       </header>
     <div id="map-canvas"></div>
+
+
+    <div id="checkboxes">
+      <form>
+        <input type="checkbox" id="layer0"
+        onclick="toggleLayer();">Ocean Temperature
+        <input type="radio" name="my-radio" value="2012"
+        onclick="toggle_overlay(this);">2012
+        <input type="radio" name="my-radio" value="2013"
+        onclick="toggle_overlay(this);">2013
+        <input type="radio" name="my-radio" value="2014"
+        onclick="toggle2014();">2014
+      </form> 
+    </div>
   </body>
 </html>

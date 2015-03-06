@@ -1,6 +1,10 @@
 var map;
+var layers;
 
-function initialize() {
+
+var showLayer;
+
+function initialize(myRadioButton) {
 	var mapOptions = {
     	center: new google.maps.LatLng(27, -70),
     	zoom: 3,
@@ -11,24 +15,13 @@ function initialize() {
   	map = new google.maps.Map(document.getElementById('map-canvas'),
       	mapOptions);
   	
-    // Create the legend and display on the map
-    var legend = document.createElement('div');
-    legend.id = 'legend';
-    var content = [];
-    content.push('<h3>Hurricane Paths*</h3>');
-    content.push('<p><div class="color white"></div>2014</p>');
-    content.push('<p><div class="color turquiose"></div>2013</p>');
-    content.push('<p><div class="color purple"></div>2012</p>');
-    legend.innerHTML = content.join('');
-    legend.index = 1;
-    map.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(legend);
 
   	
 //STORM ARTHUR
 	arthur = new google.maps.Polyline({
 		path: arthurCoordinates,
 		strokeColor: '#bce8ee',
-		strokeOpacity: 0.8,
+		strokeOpacity: 0.4,
     	icons: [{
       		icon: arthurSymbol,
       		offset: '100%'
@@ -43,7 +36,7 @@ function initialize() {
 	two = new google.maps.Polyline({
 		path: twoCoordinates,
 		strokeColor: '#bce8ee',
-		strokeOpacity: 0.8,
+		strokeOpacity: 0.4,
     	icons: [{
       		icon: twoSymbol,
       		offset: '100%'
@@ -62,7 +55,7 @@ function initialize() {
 	bertha = new google.maps.Polyline({
 		path: berthaCoordinates,
 		strokeColor: '#bce8ee',
-		strokeOpacity: 0.8,
+		strokeOpacity: 0.4,
     	icons: [{
       		icon: berthaSymbol,
       		offset: '100%'
@@ -79,7 +72,7 @@ function initialize() {
 	cristobal = new google.maps.Polyline({
 		path: cristobalCoordinates,
 		strokeColor: '#bce8ee',
-		strokeOpacity: 0.8,
+		strokeOpacity: 0.4,
     	icons: [{
       		icon: cristobalSymbol,
       		offset: '100%'
@@ -98,7 +91,7 @@ function initialize() {
 	dolly = new google.maps.Polyline({
 		path: dollyCoordinates,
 		strokeColor: '#bce8ee',
-		strokeOpacity: 0.8,
+		strokeOpacity: 0.4,
     	icons: [{
       		icon: dollySymbol,
       		offset: '100%'
@@ -115,7 +108,7 @@ function initialize() {
 	edouard = new google.maps.Polyline({
 		path: edouardCoordinates,
 		strokeColor: '#bce8ee',
-		strokeOpacity: 0.8,
+		strokeOpacity: 0.4,
     	icons: [{
       		icon: edouardSymbol,
       		offset: '100%'
@@ -134,7 +127,7 @@ function initialize() {
 	fay = new google.maps.Polyline({
 		path: fayCoordinates,
 		strokeColor: '#bce8ee',
-		strokeOpacity: 0.8,
+		strokeOpacity: 0.4,
     	icons: [{
       		icon: faySymbol,
       		offset: '100%'
@@ -150,7 +143,7 @@ function initialize() {
 	gonzalo = new google.maps.Polyline({
 		path: gonzaloCoordinates,
 		strokeColor: '#bce8ee',
-		strokeOpacity: 0.8,
+		strokeOpacity: 0.4,
     	icons: [{
       		icon: gonzaloSymbol,
       		offset: '100%'
@@ -165,7 +158,7 @@ function initialize() {
 	hanna = new google.maps.Polyline({
 		path: hannaCoordinates,
 		strokeColor: '#bce8ee',
-		strokeOpacity: 0.8,
+		strokeOpacity: 0.4,
     	icons: [{
       		icon: hannaSymbol,
       		offset: '100%'
@@ -176,13 +169,13 @@ function initialize() {
 	animateHannaCircle();
 
 //-----------------------------------------------------------------------------------
-//-----------------------2013--------------------------------------------------------
+//-----------------------2012--------------------------------------------------------
 //-----------------------------------------------------------------------------------
 //TROPICAL STORM ANDREA
   andrea = new google.maps.Polyline({
     path: andreaCoordinates,
-    strokeColor: '#fd00ff',
-    strokeOpacity: 0.5,
+    strokeColor: '#bce8ee',
+    strokeOpacity: 0.4,
       icons: [{
           icon: andreaSymbol,
           offset: '100%'
@@ -196,8 +189,8 @@ function initialize() {
 //TROPICAL STORM BARRY
   barry = new google.maps.Polyline({
     path: barryCoordinates,
-    strokeColor: '#fd00ff',
-    strokeOpacity: 0.5,
+    strokeColor: '#bce8ee',
+    strokeOpacity: 0.4,
       icons: [{
           icon: barrySymbol,
           offset: '100%'
@@ -211,8 +204,8 @@ function initialize() {
 //TROPICAL STORM CHANTAL
   chantal = new google.maps.Polyline({
     path: chantalCoordinates,
-    strokeColor: '#fd00ff',
-    strokeOpacity: 0.5,
+    strokeColor: '#bce8ee',
+    strokeOpacity: 0.4,
       icons: [{
           icon: chantalSymbol,
           offset: '100%'
@@ -226,8 +219,8 @@ function initialize() {
 //TROPICAL STORM DORIAN
   dorian = new google.maps.Polyline({
     path: dorianCoordinates,
-    strokeColor: '#fd00ff',
-    strokeOpacity: 0.5,
+    strokeColor: '#bce8ee',
+    strokeOpacity: 0.4,
       icons: [{
           icon: dorianSymbol,
           offset: '100%'
@@ -241,8 +234,8 @@ function initialize() {
 //TROPICAL STORM ERIN
   erin = new google.maps.Polyline({
     path: erinCoordinates,
-    strokeColor: '#fd00ff',
-    strokeOpacity: 0.5,
+    strokeColor: '#bce8ee',
+    strokeOpacity: 0.4,
       icons: [{
           icon: erinSymbol,
           offset: '100%'
@@ -256,8 +249,8 @@ function initialize() {
 //TROPICAL STORM FERNAND
   fernand = new google.maps.Polyline({
     path: fernandCoordinates,
-    strokeColor: '#fd00ff',
-    strokeOpacity: 0.5,
+    strokeColor: '#bce8ee',
+    strokeOpacity: 0.4,
       icons: [{
           icon: fernandSymbol,
           offset: '100%'
@@ -271,8 +264,8 @@ function initialize() {
 //TROPICAL STORM GABRIELLE
   gabrielle = new google.maps.Polyline({
     path: gabrielleCoordinates,
-    strokeColor: '#fd00ff',
-    strokeOpacity: 0.5,
+    strokeColor: '#bce8ee',
+    strokeOpacity: 0.4,
       icons: [{
           icon: gabrielleSymbol,
           offset: '100%'
@@ -286,8 +279,8 @@ function initialize() {
 //TROPICAL STORM HUMBERTO
   humberto = new google.maps.Polyline({
     path: humbertoCoordinates,
-    strokeColor: '#fd00ff',
-    strokeOpacity: 0.5,
+    strokeColor: '#bce8ee',
+    strokeOpacity: 0.4,
       icons: [{
           icon: humbertoSymbol,
           offset: '100%'
@@ -301,8 +294,8 @@ function initialize() {
 //TROPICAL STORM INGRID
   ingrid = new google.maps.Polyline({
     path: ingridCoordinates,
-    strokeColor: '#fd00ff',
-    strokeOpacity: 0.5,
+    strokeColor: '#bce8ee',
+    strokeOpacity: 0.4,
       icons: [{
           icon: ingridSymbol,
           offset: '100%'
@@ -316,8 +309,8 @@ function initialize() {
 //TROPICAL STORM JERRY
   jerry = new google.maps.Polyline({
     path: jerryCoordinates,
-    strokeColor: '#fd00ff',
-    strokeOpacity: 0.5,
+    strokeColor: '#bce8ee',
+    strokeOpacity: 0.4,
       icons: [{
           icon: jerrySymbol,
           offset: '100%'
@@ -331,8 +324,8 @@ function initialize() {
 //TROPICAL STORM KAREN
   karen = new google.maps.Polyline({
     path: karenCoordinates,
-    strokeColor: '#fd00ff',
-    strokeOpacity: 0.5,
+    strokeColor: '#bce8ee',
+    strokeOpacity: 0.4,
       icons: [{
           icon: karenSymbol,
           offset: '100%'
@@ -346,8 +339,8 @@ function initialize() {
 //TROPICAL STORM LORENZO
   lorenzo = new google.maps.Polyline({
     path: lorenzoCoordinates,
-    strokeColor: '#fd00ff',
-    strokeOpacity: 0.5,
+    strokeColor: '#bce8ee',
+    strokeOpacity: 0.4,
       icons: [{
           icon: lorenzoSymbol,
           offset: '100%'
@@ -361,8 +354,8 @@ function initialize() {
 //TROPICAL STORM MELISSA
   melissa = new google.maps.Polyline({
     path: melissaCoordinates,
-    strokeColor: '#fd00ff',
-    strokeOpacity: 0.5,
+    strokeColor: '#bce8ee',
+    strokeOpacity: 0.4,
       icons: [{
           icon: melissaSymbol,
           offset: '100%'
@@ -378,8 +371,8 @@ function initialize() {
 //TROPICAL STORM ALBERTO
   alberto = new google.maps.Polyline({
     path: albertoCoordinates,
-    strokeColor: '#00fff9',
-    strokeOpacity: 0.5,
+    strokeColor: '#bce8ee',
+    strokeOpacity: 0.4,
       icons: [{
           icon: albertoSymbol,
           offset: '100%'
@@ -393,8 +386,8 @@ function initialize() {
 //TROPICAL STORM BERYL
   beryl = new google.maps.Polyline({
     path: berylCoordinates,
-    strokeColor: '#00fff9',
-    strokeOpacity: 0.5,
+    strokeColor: '#bce8ee',
+    strokeOpacity: 0.4,
       icons: [{
           icon: berylSymbol,
           offset: '100%'
@@ -408,8 +401,8 @@ function initialize() {
 //TROPICAL STORM CHRIS
   chris = new google.maps.Polyline({
     path: chrisCoordinates,
-    strokeColor: '#00fff9',
-    strokeOpacity: 0.5,
+    strokeColor: '#bce8ee',
+    strokeOpacity: 0.4,
       icons: [{
           icon: chrisSymbol,
           offset: '100%'
@@ -423,8 +416,8 @@ function initialize() {
 //TROPICAL STORM DEBBY
   debby = new google.maps.Polyline({
     path: debbyCoordinates,
-    strokeColor: '#00fff9',
-    strokeOpacity: 0.5,
+    strokeColor: '#bce8ee',
+    strokeOpacity: 0.4,
       icons: [{
           icon: debbySymbol,
           offset: '100%'
@@ -438,8 +431,8 @@ function initialize() {
 //TROPICAL STORM ERNESTO
   ernesto = new google.maps.Polyline({
     path: ernestoCoordinates,
-    strokeColor: '#00fff9',
-    strokeOpacity: 0.5,
+    strokeColor: '#bce8ee',
+    strokeOpacity: 0.4,
       icons: [{
           icon: ernestoSymbol,
           offset: '100%'
@@ -453,8 +446,8 @@ function initialize() {
 //TROPICAL STORM FLORENCE
   florence = new google.maps.Polyline({
     path: florenceCoordinates,
-    strokeColor: '#00fff9',
-    strokeOpacity: 0.5,
+    strokeColor: '#bce8ee',
+    strokeOpacity: 0.4,
       icons: [{
           icon: florenceSymbol,
           offset: '100%'
@@ -468,8 +461,8 @@ function initialize() {
 //TROPICAL STORM GORDON
   gordon = new google.maps.Polyline({
     path: gordonCoordinates,
-    strokeColor: '#00fff9',
-    strokeOpacity: 0.5,
+    strokeColor: '#bce8ee',
+    strokeOpacity: 0.4,
       icons: [{
           icon: gordonSymbol,
           offset: '100%'
@@ -483,8 +476,8 @@ function initialize() {
 //TROPICAL STORM HELENE
   helene = new google.maps.Polyline({
     path: heleneCoordinates,
-    strokeColor: '#00fff9',
-    strokeOpacity: 0.5,
+    strokeColor: '#bce8ee',
+    strokeOpacity: 0.4,
       icons: [{
           icon: heleneSymbol,
           offset: '100%'
@@ -498,8 +491,8 @@ function initialize() {
 //TROPICAL STORM ISAAC
   isaac = new google.maps.Polyline({
     path: isaacCoordinates,
-    strokeColor: '#00fff9',
-    strokeOpacity: 0.5,
+    strokeColor: '#bce8ee',
+    strokeOpacity: 0.4,
       icons: [{
           icon: isaacSymbol,
           offset: '100%'
@@ -513,8 +506,8 @@ function initialize() {
 //TROPICAL STORM JOYCE
   joyce = new google.maps.Polyline({
     path: joyceCoordinates,
-    strokeColor: '#00fff9',
-    strokeOpacity:0.5,
+    strokeColor: '#bce8ee',
+    strokeOpacity: 0.4,
       icons: [{
           icon: joyceSymbol,
           offset: '100%'
@@ -528,8 +521,8 @@ function initialize() {
 //TROPICAL STORM JOYCE
   kirk = new google.maps.Polyline({
     path: kirkCoordinates,
-    strokeColor: '#00fff9',
-    strokeOpacity: 0.5,
+    strokeColor: '#bce8ee',
+    strokeOpacity: 0.4,
       icons: [{
           icon: kirkSymbol,
           offset: '100%'
@@ -543,8 +536,8 @@ function initialize() {
 //TROPICAL STORM LESLIE
   leslie = new google.maps.Polyline({
     path: leslieCoordinates,
-    strokeColor: '#00fff9',
-    strokeOpacity: 0.5,
+    strokeColor: '#bce8ee',
+    strokeOpacity: 0.4,
       icons: [{
           icon: leslieSymbol,
           offset: '100%'
@@ -558,8 +551,8 @@ function initialize() {
 //TROPICAL STORM MICHAEL
   michael = new google.maps.Polyline({
     path: michaelCoordinates,
-    strokeColor: '#00fff9',
-    strokeOpacity: 0.5,
+    strokeColor: '#bce8ee',
+    strokeOpacity: 0.4,
       icons: [{
           icon: michaelSymbol,
           offset: '100%'
@@ -573,8 +566,8 @@ function initialize() {
 //TROPICAL STORM NADINE
   nadine = new google.maps.Polyline({
     path: nadineCoordinates,
-    strokeColor: '#00fff9',
-    strokeOpacity: 0.5,
+    strokeColor: '#bce8ee',
+    strokeOpacity: 0.4,
       icons: [{
           icon: nadineSymbol,
           offset: '100%'
@@ -588,8 +581,8 @@ function initialize() {
 //TROPICAL STORM OSCAR
   oscar = new google.maps.Polyline({
     path: oscarCoordinates,
-    strokeColor: '#00fff9',
-    strokeOpacity: 0.5,
+    strokeColor: '#bce8ee',
+    strokeOpacity: 0.4,
       icons: [{
           icon: oscarSymbol,
           offset: '100%'
@@ -603,8 +596,8 @@ function initialize() {
 //TROPICAL STORM PATTY
   patty = new google.maps.Polyline({
     path: pattyCoordinates,
-    strokeColor: '#00fff9',
-    strokeOpacity: 0.5,
+    strokeColor: '#bce8ee',
+    strokeOpacity: 0.4,
       icons: [{
           icon: pattySymbol,
           offset: '100%'
@@ -618,8 +611,8 @@ function initialize() {
 //TROPICAL STORM RAFAEL
   rafael = new google.maps.Polyline({
     path: rafaelCoordinates,
-    strokeColor: '#00fff9',
-    strokeOpacity: 0.5,
+    strokeColor: '#bce8ee',
+    strokeOpacity: 0.4,
       icons: [{
           icon: rafaelSymbol,
           offset: '100%'
@@ -633,8 +626,8 @@ function initialize() {
 //TROPICAL STORM SANDY
   sandy = new google.maps.Polyline({
     path: sandyCoordinates,
-    strokeColor: '#00fff9',
-    strokeOpacity: 0.5,
+    strokeColor: '#bce8ee',
+    strokeOpacity: 0.4,
       icons: [{
           icon: sandySymbol,
           offset: '100%'
@@ -648,8 +641,8 @@ function initialize() {
 //TROPICAL STORM TONY
   tony = new google.maps.Polyline({
     path: tonyCoordinates,
-    strokeColor: '#00fff9',
-    strokeOpacity: 0.5,
+    strokeColor: '#bce8ee',
+    strokeOpacity: 0.4,
       icons: [{
           icon: tonySymbol,
           offset: '100%'
@@ -659,14 +652,21 @@ function initialize() {
 
   animateTonyCircle();
 
+  var showLayer = myRadioButton.value;
 
   layers = new google.maps.KmlLayer('http://kml.wxtiles.com/wxtiles.sst.kml', 
   {preserveViewport: true, suppressInfoWindows: false});
   layers.setMap(null);
 
+
+	
 }
 
-function toggleLayer() {
+
+
+
+
+function toggleLayer(i) {
   if (layers.getMap() === null) {
     layers.setMap(map);
   }
@@ -674,8 +674,5 @@ function toggleLayer() {
     layers.setMap(null);
   }
 }
-
-
-
 
 google.maps.event.addDomListener(window, 'load', initialize);

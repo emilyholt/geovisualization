@@ -20,7 +20,7 @@ var alberto;
   	var albertoSymbol = {
     	path: google.maps.SymbolPath.CIRCLE,
     	scale: 8,
-    	strokeColor: '#d6d6d6'
+    	strokeColor: '#00fff9'
   	};
 
   	function animateAlbertoCircle() {

@@ -1,12 +1,18 @@
+var map;
+
+setInterval(function() {
+    map.panBy(0.5, 0);
+}, 0.5);
+
 function initialize() {
 	var mapOptions = {
-    	center: new google.maps.LatLng(27, -70),
-    	zoom: 6,
+    	center: new google.maps.LatLng(0, -70),
+    	zoom: 3,
     	//use satelite imagery
     	mapTypeId: google.maps.MapTypeId.HYBRID
   	};
 
-  	var map = new google.maps.Map(document.getElementById('map-canvas'),
+  	map = new google.maps.Map(document.getElementById('map-canvas'),
       	mapOptions);
   	
 
@@ -842,22 +848,10 @@ function initialize() {
 	
 	animateItaCircle();
 
-	/*
-	var oceanCurrentsLayer = new google.maps.KmlLayer({
-    	url: 'https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&uact=8&ved=0CB4QFjAA&url=http%3A%2F%2Fsos.noaa.gov%2Fkml%2Fkml%2Focean_currents.kml&ei=xIP2VNLVC6PHsQTwpYHIBA&usg=AFQjCNFbPpknEHeiowkQuGbr9jh1XoUZzQ&sig2=CwKylxmR0lTK-OraDUpAXg'
-  	});
-  	oceanCurrentsLayer.setMap(map);
-	*/
-
-  	//ocean temp
-  	/*
-  	var oceanTempLayer = new google.maps.KmlLayer({
-    	url: 'http://kml.wxtiles.com/wxtiles.sst.kml'
-  	});
-  	oceanTempLayer.setMap(map);*/
 
 	
 }
+
 
 
 google.maps.event.addDomListener(window, 'load', initialize);
