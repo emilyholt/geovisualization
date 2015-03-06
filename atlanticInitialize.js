@@ -4,6 +4,8 @@ function initialize() {
 	var mapOptions = {
     	center: new google.maps.LatLng(27, -70),
     	zoom: 3,
+      mapTypeControl: false,
+      streetViewControl: false,
     	//use satelite imagery
     	mapTypeId: google.maps.MapTypeId.HYBRID
   	};
@@ -190,7 +192,7 @@ function initialize() {
       map: map
     });
 
-  animateAndreaCircle();
+  andrea.setMap(null);
 
 //-----------------------------------------------------------------------------------
 //TROPICAL STORM BARRY
@@ -205,7 +207,7 @@ function initialize() {
       map: map
     });
 
-  animateBarryCircle();
+  barry.setMap(null);
 
 //-----------------------------------------------------------------------------------
 //TROPICAL STORM CHANTAL
@@ -220,7 +222,7 @@ function initialize() {
       map: map
     });
 
-  animateChantalCircle();
+  chantal.setMap(null);
 
 //-----------------------------------------------------------------------------------
 //TROPICAL STORM DORIAN
@@ -235,7 +237,7 @@ function initialize() {
       map: map
     });
 
-  animateDorianCircle();
+  dorian.setMap(null);
 
 //-----------------------------------------------------------------------------------
 //TROPICAL STORM ERIN
@@ -250,7 +252,7 @@ function initialize() {
       map: map
     });
 
-  animateErinCircle();
+  erin.setMap(null);
 
 //-----------------------------------------------------------------------------------
 //TROPICAL STORM FERNAND
@@ -265,7 +267,7 @@ function initialize() {
       map: map
     });
 
-  animateFernandCircle();
+  fernand.setMap(null);
 
 //-----------------------------------------------------------------------------------
 //TROPICAL STORM GABRIELLE
@@ -280,7 +282,7 @@ function initialize() {
       map: map
     });
 
-  animateGabrielleCircle();
+  gabrielle.setMap(null);
 
 //-----------------------------------------------------------------------------------
 //TROPICAL STORM HUMBERTO
@@ -295,7 +297,7 @@ function initialize() {
       map: map
     });
 
-  animateHumbertoCircle();
+  humberto.setMap(null);
 
 //-----------------------------------------------------------------------------------
 //TROPICAL STORM INGRID
@@ -310,7 +312,7 @@ function initialize() {
       map: map
     });
 
-  animateIngridCircle();
+  ingrid.setMap(null);
 
 //-----------------------------------------------------------------------------------
 //TROPICAL STORM JERRY
@@ -325,7 +327,7 @@ function initialize() {
       map: map
     });
 
-  animateJerryCircle();
+  jerry.setMap(null);
 
 //-----------------------------------------------------------------------------------
 //TROPICAL STORM KAREN
@@ -340,7 +342,7 @@ function initialize() {
       map: map
     });
 
-  animateKarenCircle();
+  karen.setMap(null);
 
 //-----------------------------------------------------------------------------------
 //TROPICAL STORM LORENZO
@@ -355,7 +357,7 @@ function initialize() {
       map: map
     });
 
-  animateLorenzoCircle();
+  lorenzo.setMap(null);
 
 //-----------------------------------------------------------------------------------
 //TROPICAL STORM MELISSA
@@ -370,7 +372,7 @@ function initialize() {
       map: map
     });
 
-  animateMelissaCircle();
+  melissa.setMap(null);
 
 //-----------------------------------------------------------------------------------
 //------------2012-------------------------------------------------------------------
@@ -387,7 +389,7 @@ function initialize() {
       map: map
     });
 
-  animateAlbertoCircle();
+  alberto.setMap(null);
 
 //-----------------------------------------------------------------------------------
 //TROPICAL STORM BERYL
@@ -402,7 +404,7 @@ function initialize() {
       map: map
     });
 
-  animateBerylCircle();
+  beryl.setMap(null);
 
 //-----------------------------------------------------------------------------------
 //TROPICAL STORM CHRIS
@@ -417,7 +419,7 @@ function initialize() {
       map: map
     });
 
-  animateChrisCircle();
+  chris.setMap(null);
 
 //-----------------------------------------------------------------------------------
 //TROPICAL STORM DEBBY
@@ -432,7 +434,7 @@ function initialize() {
       map: map
     });
 
-  animateDebbyCircle();
+  debby.setMap(null);
 
 //-----------------------------------------------------------------------------------
 //TROPICAL STORM ERNESTO
@@ -447,7 +449,7 @@ function initialize() {
       map: map
     });
 
-  animateErnestoCircle();
+  ernesto.setMap(null);
 
 //-----------------------------------------------------------------------------------
 //TROPICAL STORM FLORENCE
@@ -462,7 +464,7 @@ function initialize() {
       map: map
     });
 
-  animateFlorenceCircle();
+  florence.setMap(null);
 
 //-----------------------------------------------------------------------------------
 //TROPICAL STORM GORDON
@@ -477,7 +479,7 @@ function initialize() {
       map: map
     });
 
-  animateGordonCircle();
+  gordon.setMap(null);
 
 //-----------------------------------------------------------------------------------
 //TROPICAL STORM HELENE
@@ -492,7 +494,7 @@ function initialize() {
       map: map
     });
 
-  animateHeleneCircle();
+  helene.setMap(null);
 
 //-----------------------------------------------------------------------------------
 //TROPICAL STORM ISAAC
@@ -507,7 +509,7 @@ function initialize() {
       map: map
     });
 
-  animateIsaacCircle();
+  isaac.setMap(null);
 
 //-----------------------------------------------------------------------------------
 //TROPICAL STORM JOYCE
@@ -522,7 +524,7 @@ function initialize() {
       map: map
     });
 
-  animateJoyceCircle();
+  joyce.setMap(null);
 
 //-----------------------------------------------------------------------------------
 //TROPICAL STORM JOYCE
@@ -537,7 +539,7 @@ function initialize() {
       map: map
     });
 
-  animateKirkCircle();
+  kirk.setMap(null);
 
 //-----------------------------------------------------------------------------------
 //TROPICAL STORM LESLIE
@@ -552,7 +554,7 @@ function initialize() {
       map: map
     });
 
-  animateLeslieCircle();
+  leslie.setMap(null);
 
 //-----------------------------------------------------------------------------------
 //TROPICAL STORM MICHAEL
@@ -567,7 +569,7 @@ function initialize() {
       map: map
     });
 
-  animateMichaelCircle();
+  michael.setMap(null);
 
 //-----------------------------------------------------------------------------------
 //TROPICAL STORM NADINE
@@ -582,7 +584,7 @@ function initialize() {
       map: map
     });
 
-  animateNadineCircle();
+  nadine.setMap(null);
 
 //-----------------------------------------------------------------------------------
 //TROPICAL STORM OSCAR
@@ -597,7 +599,7 @@ function initialize() {
       map: map
     });
 
-  animateOscarCircle();
+  oscar.setMap(null);
 
 //-----------------------------------------------------------------------------------
 //TROPICAL STORM PATTY
@@ -612,7 +614,7 @@ function initialize() {
       map: map
     });
 
-  animatePattyCircle();
+  patty.setMap(null);
 
 //-----------------------------------------------------------------------------------
 //TROPICAL STORM RAFAEL
@@ -627,7 +629,7 @@ function initialize() {
       map: map
     });
 
-  animateRafaelCircle();
+  rafael.setMap(null);
 
 //-----------------------------------------------------------------------------------
 //TROPICAL STORM SANDY
@@ -642,7 +644,7 @@ function initialize() {
       map: map
     });
 
-  animateSandyCircle();
+  sandy.setMap(null);
 
 //-----------------------------------------------------------------------------------
 //TROPICAL STORM TONY
@@ -657,7 +659,7 @@ function initialize() {
       map: map
     });
 
-  animateTonyCircle();
+  tony.setMap(null);
 
 
   layers = new google.maps.KmlLayer('http://kml.wxtiles.com/wxtiles.sst.kml', 
@@ -673,6 +675,185 @@ function toggleLayer() {
   else {
     layers.setMap(null);
   }
+}
+
+function toggle2012On() {
+  alberto.setMap(map);
+  animateAlbertoCircle();
+
+  beryl.setMap(map);
+  animateBerylCircle();
+
+  chris.setMap(map);
+  animateChrisCircle();
+
+  debby.setMap(map);
+  animateDebbyCircle();
+
+  ernesto.setMap(map);
+  animateErnestoCircle();
+
+  florence.setMap(map);
+  animateFlorenceCircle();
+
+  gordon.setMap(map);
+  animateGordonCircle();
+
+  helene.setMap(map);
+  animateHeleneCircle();
+
+  isaac.setMap(map);
+  animateIsaacCircle();
+
+  joyce.setMap(map);
+  animateJoyceCircle();
+
+  kirk.setMap(map);
+  animateKirkCircle();
+
+  leslie.setMap(map);
+  animateLeslieCircle();
+
+  michael.setMap(map);
+  animateMichaelCircle();
+
+  nadine.setMap(map);
+  animateNadineCircle();
+
+  oscar.setMap(map);
+  animateOscarCircle();
+
+  patty.setMap(map);
+  animatePattyCircle();
+
+  rafael.setMap(map);
+  animateRafaelCircle();
+
+  sandy.setMap(map);
+  animateSandyCircle();
+
+  tony.setMap(map);
+  animateTonyCircle();
+}
+
+function toggle2012Off() {
+  alberto.setMap(null);
+  beryl.setMap(null);
+  chris.setMap(null);
+  debby.setMap(null);
+  ernesto.setMap(null);
+  florence.setMap(null);
+  gordon.setMap(null);
+  helene.setMap(null);
+  isaac.setMap(null);
+  joyce.setMap(null);
+  kirk.setMap(null);
+  leslie.setMap(null);
+  michael.setMap(null);
+  nadine.setMap(null);
+  oscar.setMap(null);
+  patty.setMap(null);
+  rafael.setMap(null);
+  sandy.setMap(null);
+  tony.setMap(null);
+}
+
+function toggle2013On() {
+  andrea.setMap(map);
+  animateAndreaCircle();
+
+  barry.setMap(map);
+  animateBarryCircle();
+
+  chantal.setMap(map);
+  animateChantalCircle();
+
+  dorian.setMap(map);
+  animateDorianCircle();
+
+  erin.setMap(map);
+  animateErinCircle();
+
+  fernand.setMap(map);
+  animateFernandCircle();
+
+  gabrielle.setMap(map);
+  animateGabrielleCircle();
+
+  humberto.setMap(map);
+  animateHumbertoCircle();
+
+  ingrid.setMap(map);
+  animateIngridCircle();
+
+  jerry.setMap(map);
+  animateJerryCircle();
+
+  karen.setMap(map);
+  animateKarenCircle();
+
+  lorenzo.setMap(map);
+  animateLorenzoCircle();
+
+  melissa.setMap(map);
+  animateMelissaCircle();
+}
+
+function toggle2013Off() {
+  andrea.setMap(null);
+  barry.setMap(null);
+  chantal.setMap(null);
+  dorian.setMap(null);
+  erin.setMap(null);
+  fernand.setMap(null);
+  gabrielle.setMap(null);
+  humberto.setMap(null);
+  ingrid.setMap(null);
+  jerry.setMap(null);
+  karen.setMap(null);
+  lorenzo.setMap(null);
+  melissa.setMap(null);
+}
+
+function toggle2014On() {
+  arthur.setMap(map);
+  animateArthurCircle();
+
+  bertha.setMap(map);
+  animateBerthaCircle();
+
+  cristobal.setMap(map);
+  animateCristobalCircle();
+
+  dolly.setMap(map);
+  animateDollyCircle();
+
+  edouard.setMap(map);
+  animateEdouardCircle();
+
+  fay.setMap(map);
+  animateFayCircle();
+
+  gonzalo.setMap(map);
+  animateGonzaloCircle();
+
+  hanna.setMap(map);
+  animateHannaCircle();
+
+  two.setMap(map);
+  animateTwoCircle();
+}
+
+function toggle2014Off() {
+  arthur.setMap(null);
+  bertha.setMap(null);
+  cristobal.setMap(null);
+  dolly.setMap(null);
+  edouard.setMap(null);
+  fay.setMap(null);
+  gonzalo.setMap(null);
+  hanna.setMap(null);
+  two.setMap(null);
 }
 
 

@@ -25,6 +25,11 @@
         margin: 5px;
         font-size: 12px;
         font-family: Arial, sans-serif;
+        position: fixed;
+        left:10px;
+        bottom:0px;
+        height:120px;
+        width:120px;
       }
 
       .color {
@@ -123,13 +128,17 @@
       <form>
         <input type="checkbox" id="layer0"
         onclick="toggleLayer();">Ocean Temperature
-        <input type="radio" name="my-radio" value="2012"
-        onclick="toggle_overlay(this);">2012
-        <input type="radio" name="my-radio" value="2013"
-        onclick="toggle_overlay(this);">2013
-        <input type="radio" name="my-radio" value="2014"
-        onclick="toggle2014();">2014
-      </form> 
+        </form> 
     </div>
+    
+    <div id="panel">    
+        <input type=button value="Show 2012" onclick="toggle2012On();">
+        <input type=button value="Hide 2012" onclick="toggle2012Off();">
+        <input type=button value="Show 2013" onclick="toggle2013On();">
+        <input type=button value="Hide 2013" onclick="toggle2013Off();">
+        <input type=button value="Show 2014" onclick="toggle2014On();">
+        <input type=button value="Hide 2014" onclick="toggle2014Off();">
+    </div>  
+    
   </body>
 </html>
