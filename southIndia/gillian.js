@@ -18,7 +18,7 @@ var gillian;
   	var gillianSymbol = {
     	path: google.maps.SymbolPath.CIRCLE,
     	scale: 8,
-    	strokeColor: '#ff0000'
+    	strokeColor: '#d6d6d6'
   	};
 
     

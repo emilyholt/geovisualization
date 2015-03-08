@@ -1,11 +1,12 @@
 body {
   margin: 0;
   padding: 0;
-  background: #ccc;
+  background: #444;
+  font-family: 'Oswald', sans-serif;
 }
  
 .nav ul {
-  list-style: none;
+  /*list-style: none;*/
   background-color: #444;
   text-align: center;
   padding: 0;
@@ -13,29 +14,34 @@ body {
 }
 .nav li {
   font-family: 'Oswald', sans-serif;
-  font-size: 1.2em;
+  
   line-height: 40px;
   height: 40px;
   border-bottom: 1px solid #888;
+}
+.nav p {
+  color: white;
 }
  
 .nav a {
   text-decoration: none;
   color: #fff;
   display: block;
-  transition: .3s background-color;
+  /*transition: .3s background-color;*/
 }
  
 .nav a:hover {
   background-color: #005f5f;
 }
+
+
 /* 
 .nav a.active {
   background-color: #fff;
   color: #444;
   cursor: default;
 }
- */
+*/
 @media screen and (min-width: 600px) {
   .nav li {
     width: 120px;
@@ -50,18 +56,8 @@ body {
     display: inline-block;
     margin-right: -4px;
   }
+
+  
  
-  /* Options 2 - Float
-  .nav li {
-    float: left;
-  }
-  .nav ul {
-    overflow: auto;
-    width: 600px;
-    margin: 0 auto;
-  }
-  .nav {
-    background-color: #444;
-  }
-  */
+ 
 }
